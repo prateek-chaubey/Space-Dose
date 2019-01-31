@@ -1,0 +1,377 @@
+/*
+Theme Name: Space Dose
+Author: Prateek Chaubey
+Author URI: https://h4c-k3r.github.io/
+Version: 1.0
+*/
+/*
+|----------------------------------------------------------------------------
+| Made by PRATEEK CHAUBEY
+| MIT LICENSE
+|----------------------------------------------------------------------------
+*/
+/*---------------------------------
+	© Prateek Chaubey 2018-present
+-----------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Major+Mono+Display|Montserrat|PT+Sans|Raleway|Roboto+Mono|Ubuntu");
+
+
+*{
+padding:0;
+margin:0;
+outline:none;
+}
+body{
+font-family:lato;
+}
+::selection{
+background:orange;
+color:blue;
+}
+#nav{
+transition:.5s;
+font-family:lato;
+background:#222;
+height:60px;
+width:100%;
+z-index:9999;
+position:fixed;
+top:0;
+left:0;
+}
+#bar{
+background:#ddd;
+height:3px;
+width:30px;
+border-radius:5px;
+position:absolute;
+top:25px;
+left:5px;
+text-align:left;
+}
+#bar::after,#bar::before{
+content:'';
+background:#ddd;
+height:3px;
+width:50px;
+border-radius:5px;
+position:absolute;
+top:-10px;
+}
+#bar::before{
+top:10px;
+}
+#nam{
+background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+color: transparent;
+background-clip:text;
+-webkit-background-clip:text;
+position:absolute;
+right:0px;
+text-align: center;
+line-height:60px;
+top:0;
+font-size:40px;
+font-weight:lighter;
+}
+#nam::before{
+content:'';
+height:100%;
+width:100%;
+filter:blur(40px);
+position:absolute;
+z-index:-1;
+background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+animation:blur 1s infinite;
+}
+@keyframes blur{
+0%{
+filter:blur(35px);
+}
+50%{
+filter:blur(50px);
+}
+100%{
+filter:blur(35px);
+}
+}
+a{text-decoration:none;}a:hover{text-decoration:underline;}
+#sidenav{
+background:#333;
+color:white;
+height:100%;
+width:100%;
+top:0;
+left:0;
+z-index:9999;
+position:fixed;
+font-size:30px;
+transform:scale(0);
+transition:.5s;
+}
+#close{
+position:absolute;
+top:0px;
+right:15px;
+font-size:35px;
+font-weight:bold;
+}
+
+
+#intro{
+height:100%;
+background:url("../img/img01.png");
+background-size:cover;
+background-repeat:no-repeat;
+margin-top:60px;
+color:red;
+position:relative;
+width:100%;
+word-spacing:2px;
+animation:int .5s ;
+}
+@keyframes into{0%{transform:scale(.8);}100%{transform: scale(1);}}
+#water{
+height:390px;
+background:rgba(120,220,255,.1);
+position:absolute;
+width:100%;
+margin-top:0px;
+pointer-events:none;
+overflow:hidden;
+}
+#water:after,
+#water:before{
+position: absolute;
+content: "";
+background:#000;
+display: block;
+top: 0%;
+left: 50%;
+z-index:1;
+opacity:.5;
+width: 200%;
+filter:blur(10px);
+height:200%;
+transform: translate(-50%,-75%);
+
+}
+#water:before {
+background: rgba(255,255,255,.3);
+border-radius: 45%;
+animation: animate 5.5s linear infinite;
+}
+#water:after{
+background: rgba(255,255,255,.2);
+border-radius: 40%;
+animation: animate 9.5s linear infinite;
+}
+@keyframes animate {
+0%{
+transform: translate(-50%,-75%) rotate(0deg);
+}
+100%{
+transform: translate(-50%,-75%) rotate(360deg);
+}
+}
+#nav ul,#sidenav ul{
+list-style:none;
+display:none;
+}
+#up{
+opacity:0;
+}
+button{
+background:#349944;
+color:#fff;
+border-radius:5px;
+border:0;
+height:40px;
+width:90px;
+font-size:12px;
+margin-top:18px;
+}
+#nav li{
+margin-left:40px;
+margin-top:20px;
+font-size:25px;
+}
+#sidenav ul{
+display:block;
+border-left:2px solid green;
+margin-left:50px;
+margin-top:60px;
+}
+#sidenav li{
+margin-top:20px;
+margin-left:5px;
+}
+.c{
+font-size:15px;
+position:absolute;
+bottom:0px;
+margin-left:25%;
+}
+#nav{background:url("../img/back.png");background-repeat:no-repeat; background-size:cover;}
+#naml{
+background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+color: transparent;
+background-clip:text;
+-webkit-background-clip:text;
+font-size:30px;
+font-weight:lighter;
+margin-left:10px;
+}
+
+.news{
+height:300px;
+width:90%;
+margin:auto;
+overflow:hidden;
+position:relative;
+margin-top:15px;
+background:url("../img/img6.png");
+background-repeat:no-repeat;
+background-size: cover;
+background-position:50%;
+transition:.5s;
+}
+.news:hover{
+transform:scale(1.075);
+}
+.des{
+background:rgba(50,50,50,.9);
+height:100px;
+width:100%;
+font-weight:bolder;
+padding:5px;
+color:#fff;
+top:67%;
+text-align:center;
+font-size:20px;
+position:relative;
+}
+.nn{
+height:300px;
+width:90%;
+margin:auto;
+overflow:hidden;
+position:relative;
+margin-top:15px;
+color:#fff;
+background:#44d;
+}
+#foot{
+color:#fff;
+margin-left:20px;
+font-size:15px;
+}
+#foot a{
+color:rgb(50,250,255);
+font-weight:bold;
+}
+#foot ul{
+list-style:none;
+}
+#topt{
+position:fixed;
+z-index:1;
+background:rgba(255,255,255,.7);
+color:black;
+bottom:20px;
+height:40px;
+width:40px;
+border-radius:5px 0 0 5px ;
+text-align:center;
+font-size:35px;
+font-weight:bolder;
+line-height:40px;
+display:none;
+right:0px;
+}
+.loader3{
+width:70px;
+height:70px;
+border:5px solid transparent;
+border-top:5px solid red;
+margin:auto;
+border-radius:50%;
+z-index:99999;
+animation:loader 1s infinite;
+}
+@keyframes loader{
+0%{
+transform:rotate(-360deg);
+}
+}
+#serct input,#serc input{
+background:#222;
+font-size:22px;
+border:0;
+width:0;
+height:35px;
+color:white;
+transition:.5s;
+text-align:center;
+}
+#serc:hover input{
+width:200px;
+}
+input::placeholder{
+color:white;
+}
+#serct:hover input{
+width:180px;
+}
+.fa{
+color:white;
+}
+.load{
+height:40px;
+width:40px;
+border:8px solid transparent;
+border-top:5px solid #aaa;
+border-bottom:6px solid #fff;
+margin:auto;
+border-radius:50%;
+animation:lod 1s infinite;
+}
+@keyframes lod{
+0%{transform:rotate(360deg);}
+25%{transform:rotate(360deg);}
+50%{transform:rotate(0deg);}
+100%{transform:rotate(0deg);}
+}
+.socil{
+font-size:20px;
+letter-spacing:20px;
+}
+.fa-facebook:hover{
+color:#3B5999;
+}
+.fa-instagram:hover{
+color:#E4405F;
+}
+.fa-google-plus:hover{
+color:#DD4B39;
+}
+.fa-pinterest:hover{
+color:#FF5700;
+}
+.fa-twitter:hover{
+color:#55ACEE;
+}
+@media screen and (min-width: 760px) {
+#bar,#close{display:none;}
+#mess{margin-top:0px;}
+#water{height:800px;}
+#water:before,#water:after{height:200%;width:200%;opacity:.3;}
+#nav ul{display:flex;}
+.news{width:48%;}
+.new{display:flex;}
+#foot ul{display:flex;position:relative;top:-120px;}
+#foot ul li{margin-left:200px;}
+}
