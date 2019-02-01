@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#111">
+<link rel="stylesheet" href="css/css/font-awesome.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon"  href="img/imgg/ICON.PNG">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+<meta name="description" content="Canvas Loader using HTML,CSS and JavasScript" />
+<meta name="keywords" content="JAXA,ISRO,NASA,INDIAN SPACE RESEARCH ORGANIZATION,National Aeronautics and Space Administration, CSA,SPACE NEWS ,SPACE DOSE,SPACE,FACTS,POST ,European Space Agency" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="google" content="notranslate"/> 
+<meta property="og:type" content="Space Dose: A place for all space lovers"/> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/> 
+<meta name="referrer" content="origin"/> 
+<meta name="apple-mobile-web-app-capable" content="yes"/> 
+<meta name="twitter:image" content="img/imgg/ICON.PNG"/>
+<meta name="msapplication-TileImage" content="img/imgg/ICON.PNG"/> 
+<meta name="msapplication-TileColor" content="#111"/> 
+<meta name="on" content="x-dns-prefetch-control"/> 
+<link rel="apple-touch-icon" href="img/imgg/ICON.PNG"/> 
+<meta property="og:title" content="Space Dose"/> 
+<meta property="og:url" content="http://space-dose.github.io/"/> 
+<meta property="og:description" content="Hee you can get thousands of Space facts and news."/> 
+<meta property="og:site_name" content="Space Dose for all Space Lovers"/> 
+<meta property="og:image" content="img/imgg/ICON.PNG"/> 
+<meta property="og:image:type" content="image/png"/> 
+
+<title>Space Dose</title>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8672728433742355",
+    enable_page_level_ads: true
+  });
+</script>
+<!--<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Montserrat|PT+Sans|Raleway|Roboto+Mono|Ubuntu" rel="stylesheet">-->
+<link rel="stylesheet" href="css/custom-btn.css">
+</head>
+<body bgcolor="#000" text="#fff"  link="white" vlink="#stupidandnonesense" alink="#donkeythefellow">
+<div class="errorr" >
+<h1>401</h1>
+<p>This Page is not for Unauthorized person so please view this page in desktop mode or in PC<br/>-by <b>PRATEEK CHAUBEY</b></p>
+</div>
+
+<div class="mainn">
+<div id="up" ></div>
+<br><br>
+<div id="mess" >
+<span>Welcome</span>
+<h1 id="usernam" ></h1>
+</div>
+<br>
+
+<div class="searchhh">
+<div class="dropdown">
+<!--DROPDOWN HERE-->
+<div id="dropbtn">Video</div>
+<div class="item" style="border-top:1px solid silver;" onclick="changess('Live')">Live</div>
+<div class="item" onclick="changess('NASA')">NASA</div>
+<div class="item" onclick="changess('Video')">Video</div>
+
+</div>
+<input type="text" placeholder="Search Here" class="serrt"/>
+<button onclick="searchhh()"><i class="fa fa-search" onclick="searchhh()"></i></button>
+
+
+
+</div>
+<br>
+
+
+
+
+<style type="text/css">
+.dropdown{
+dispaly:inline-block;
+width:20%;
+height:100%;
+}
+#dropbtn{
+width:100%;
+height:100%;
+background:rgba(100,100,100,0);
+text-align:center;
+line-height:50px;
+border-radius:40px 0 0 40px;
+position:relative;
+}
+.item{
+
+height:30px;
+width:calc(100% - 50px);
+margin-left:30px;
+text-align:center;
+border-bottom:1px solid silver;
+display:none;
+background:rgba(255,255,255,.2);
+}
+.item:hover{
+background:rgba(255,255,255,.9);
+color:black;
+}
+#dropbtn:hover ~ .item{
+display:block;
+}
+.dropdown:hover .item{
+display:block;
+}
+#dropbtn:after{
+content:'';
+width: 0;
+height: 0;
+position:absolute;
+border-left: 5px solid transparent;
+border-right: 5px solid transparent;
+border-top: 10px solid #555;
+top:20px;
+right:40px;
+}
+.searchhh{
+height:50px;
+background:#222;
+width:70%;
+border-radius:40px;
+margin:auto;
+
+position:relative;
+}
+.searchhh input{
+border:0;
+height:calc(100% - 20px);
+width:60%;
+position:absolute;
+top:0px;
+color:white;
+right:20%;
+font-size:20px;
+padding:10px;
+background:rgba(100,100,100,.8);
+}
+
+
+
+
+
+
+
+
+
+
+.searchhh button{
+border:0;
+height:100%;
+width:20%;
+background:rgba(0,0,0,.8);
+position:absolute;
+top:-18px;
+right:0%;
+border-radius:0 40px 40px 0;
+}
+.vidbox{ width:550px; background:#000; margin:0px auto;}
+
+#video{
+height:310px;
+width:550px;}
+#prog,#vol{
+-webkit-appearance: none;
+width: 100%;
+height: 5px;
+left:-2px;
+border-radius: 5px;   
+background: #fff;
+top:-2px;
+outline: none;
+position:absolute;
+}
+
+#prog::-webkit-slider-thumb ,#vol::-webkit-slider-thumb {
+-webkit-appearance: none;
+appearance: none;
+width: 15px;
+height: 15px;
+//background: firebrick;
+border-radius: 50%; 
+}
+#vol::-webkit-slider-thumb  {
+background:red;
+}
+#progdone{
+background: firebrick;
+height:5px;
+border-radius: 15px;   
+border:0;
+position:absolute;
+width:0%;
+top:-2px;
+left:-2px;
+pointer-events:none;
+}
+.progress{
+width:80%;
+height:20px;
+position:absolute;
+top:17px;
+left:40px;
+background: transparent;
+}
+#pl{
+height:20px;
+background:transparent;
+width:50px;
+position:relative;
+top:-10px;
+font-size:20px;
+left:-10px;
+}
+#mute{
+border:0;
+top:5px;
+position:absolute;
+right:120px;
+height:40px;
+width:50px;
+background:transparent;
+outline:none;
+}
+#mute img{
+height:20px;
+width:20px;
+}
+#vol{
+left:430px;
+top:40px;
+width:100px;
+}
+#totalT,#dur{
+top:30px;
+position:absolute;
+color:white;
+left:5px;
+font-size:20px;
+font-weight:bold;
+}
+#full{left:500px;top:5px;position:absolute;font-weight:bolder;}
+#totalT{left:70px;}
+#controls{
+width:100%;
+position:relative;
+background:#777;
+}
+#progdone:before{
+content:'';
+position:absolute;
+height:15px;
+right:-6px;
+width:15px;
+top:-4px;
+border-radius:50%;
+background:red;
+z-index:1;
+}
+.li{
+position:relative;
+}
+.li span{
+background:red;
+color:#fff;
+padding:3px;
+position:absolute;
+right:5px;
+bottom:30px;
+border-radius:5px;
+}
+
+</style>
+
+</head>
+<body>
+<div class="vidbox">
+<iframe id="vidd" src="https://www.youtube.com/embed/21X5lGlDOfg?showinfo=0&rel=0" style="height:400px;width:100%;display:none;" ></iframe>
+<video id="video" >  <source src="VID1.mp4" type="video/mp4"></video>
+<div id="controls" >
+<button onclick="Play()" id="pl" ><i class="fa fa-play"></i></button>
+<br><button onclick="Mute()" id="mute" ><img src="img/imgunmute.svg"></button><br>
+<div class="progress" id="div" >
+<input type="range" value="0"   class="slider"  oninput="changetime(this.value)" onchange="changetime(this.value)" id="prog" >
+<div id="progdone" ></div>
+</div><br>
+<span id="dur" >00:00</span><span id="totalT" >00:00</span>
+<input type="range" value="100" max="100" id="vol"  oninput="setvolume(this.value)" onchange="setvolume(this.value)" >
+<span id="full" >[ &nbsp;]</span>
+</div>
+</div>
+<!--video-->
+
+
+
+<br><br>
+<div class="use" >
+<div class="li" ><img onclick="openvid('https://www.youtube.com/embed/21X5lGlDOfg?showinfo=0&rel=0')" src="img/vid/16.png" style="margin-left:0"  /><span>Live Now</span></div>
+<img src="img/vid/17.png" onclick="openvid('https://www.youtube.com/embed/5LpwhzCVTAY?showinfo=0&rel=0')" alt="video 1" />
+<img src="img/vid/244.png" onclick="openvid('https://www.youtube.com/embed/GMDiL_DICeU?showinfo=0&rel=0')" />
+<img src="img/vid/14.png" onclick="openvid('https://www.youtube.com/embed/-kcKjmsCO8U?rel=0&showinfo=0')"  />
+<img src="img/vid/13.png" onclick="openvid('https://www.youtube.com/embed/pr0Mm-vbdxw?showinfo=0&rel=0')" />
+<img src="img/vid/12.png" onclick="openvid('https://www.youtube.com/embed/FBzU8L01O7E?showinfo=0&rel=0')" />
+<img src="img/vid/107.png" onclick="openvid('https://www.youtube.com/embed/?v=OfIlau2VVp4?rel=0&showinfo=0')" />
+</div>
+
+
+
+
+
+
+<br><br>
+<div class="new">
+<div id="rating" >
+<h2 id="ra" >Rate this Video</h2>
+<i class="fa s fa-star-o" onclick="rates('1')"></i>
+<i class="fa s fa-star-o" onclick="rates('2')"></i>
+<i class="fa s fa-star-o" onclick="rates('3')"></i>
+<i class="fa s fa-star-o" onclick="rates('4')"></i>
+<i class="fa s fa-star-o" onclick="rates('5')"></i><br>
+<button onclick="ratte()" id="sub" > Submit </button>
+</div>
+<div id="t-comment">
+<div id="tt-com">
+<div class="addcom"><img src="img/AVATAR.PNG">Nice<span class="tim">11:11</span><span class="pro">Mohit</span></div>
+<div class="addcom"><img src="img/AVATAR.PNG">Wow<span class="tim">18:11</span><span class="pro">Ankit</span></div>
+<div class="addcom"><img src="img/AVATAR.PNG">Awesome<span class="tim">20:22</span><span class="pro">Raj</span></div>
+<div class="addcom"><img src="img/AVATAR.PNG">Awesome<span class="tim">15:15</span><span class="pro">prateek</span></div>
+</div>
+
+
+<div class="comment" >
+<img src="img/AVATAR2.PNG"/><input type="text"  id="com" placeholder="Type Your comment here" maxlength="15"/><button onclick="commentt()"><i class="fa fa-send"></i></button>
+</div>
+</div>
+</div>
+<style type="text/css">
+/*
+font-family: 'Raleway', sans-serif;
+font-family: 'Major Mono Display', monospace;
+font-family: 'Montserrat', sans-serif;
+font-family: 'PT Sans', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+font-family: 'Roboto Mono', monospace;
+*/
+#tt-com{
+height:83%;
+overflow:auto;
+width:100%;
+margin-top:5px;
+position:absolute;
+border-radius:30px	;
+}
+#tt-com::-webkit-scrollbar{
+background:transparent;
+}
+#t-comment{
+height:350px;
+width:calc(40% - 90px);
+position:relative;
+background:rgba(55,55,55,.6);
+border-radius:30px	;
+margin-left:100px;
+
+}
+.addcom{
+background:white;
+width:50%;
+padding:5px;
+height:35px;
+color:black;
+margin:20px;
+border-radius:2px;
+text-align:center;
+font-size:20px;
+line-height:35px;
+position:relative;
+}
+.addcom img{
+width:35px;
+height:35px;
+position:absolute;
+left:3px;
+}
+.comment{
+text-align:center;
+height:100%;
+top:85%;
+left:0px;
+width:100%;
+position:relative;
+}
+textarea::placeholder{
+color:white;
+}
+.comment #com{
+border:0px;
+background:silver;
+width:320px;
+height:30px;
+color:violet;
+font-size:20px;
+padding:10px;
+position:relative;
+top:-18px;
+outline:none;}
+.comment input:focus{
+background:white;
+}
+.comment img{
+/*/position:absolute;left:0;/**/
+height:50px;
+width:50px;
+border-radius:50%  0% 0% 50%;
+}
+.comment button{
+height:50px;
+width:50px;
+border-radius:0  50% 50% 0%;
+position:relative;
+top:-21px;
+filter:grayscale(100%);
+background:violet;
+trasition:0.5s;
+}
+.comment button:hover{
+filter:grayscale(00%);
+}
+.use{
+width:100%;
+height:270px;
+overflow:auto;
+display:flex;
+margin:auto;
+}
+.use img{
+width:250px;
+height:250px;
+margin-left:100px;
+}
+#rating{
+text-align:center;
+color:#888;
+margin-top:100px;
+width:50%;
+font-size:40px;
+letter-spacing:10px;
+}
+#rating h2{
+font-size:30px;
+color:#fff;
+letter-spacing:0;
+}
+#mess {
+text-align:center;
+margin-top:50px;
+}
+#mess span{ 
+color:#fff;
+font-size:20px;
+}
+#mess h1{
+color: transparent;
+background: linear-gradient(327deg,gold,red,purple,violet);
+text-transform:uppercase;
+-webkit-background-clip: text;
+font-style:italic;
+letter-spacing:3px;
+font-size:40px;
+font-family: sans-serif;
+animation:animate 10s linear infinite;
+}
+@keyframes animate{
+0%{
+filter:hue-rotate(50deg);
+}
+50%{
+filter:hue-rotate(260deg);
+}
+100%{
+filter:hue-rotate(50deg);
+}
+}
+@media screen and (max-width: 760px) {
+.mainn{
+display:none;
+}
+.errorr{
+display:block;
+}
+}
+@media screen and (min-width: 760px) {
+div#video_player_box{display:block;}
+.errorr{
+display:none;
+}
+}
+
+#up{
+z-index:999;
+}
+#toast{
+color:red;
+text-align:center;
+line-height:50px;
+width:100%;
+height:50px;
+position:fixed;
+animation:toast .2s;
+display:none;
+background:yellow;
+bottom:0px;
+}
+@keyframes toast{
+from{
+bottom:-5px;
+}
+to{
+bottom:0px;
+}
+}
+.addcom .pro{
+font-size:10px;
+position:absolute;
+top:-10px;
+right:10px;
+text-transform:uppercase;
+color:green;
+}
+.addcom .tim{
+font-size:10px;
+position:absolute;
+bottom:-10px;
+right:10px;
+text-transform:uppercase;
+color:green;
+}
+</style>
+
+
+<script type="text/javascript">
+var mxx;
+var m=localStorage.getItem("username");
+document.getElementById("usernam").textContent=m;
+function rates(x){
+mxx=9;
+var t=x;
+var i;
+var mm=document.getElementsByClassName("s");
+for(i=0;i<mm.length;i++){
+mm[i].style.color="white";
+$(mm[i]).addClass('fa-star-o');
+$(mm[i]).removeClass('fa-star');
+}
+for(i=0;i<t;i++){
+mm[i].style.color="gold";
+$(mm[i]).addClass('fa-star');
+$(mm[i]).removeClass('fa-star-o');
+}
+}
+function commentt(){
+var cgh=document.getElementById("com");
+if(cgh.value!==""){
+var x=document.createElement("div");
+document.getElementById("tt-com").appendChild(x);
+x.setAttribute("class","addcom");
+var k=document.getElementById("com");
+var kk=document.createElement("span");
+var kkk=document.createElement("span");
+kk.setAttribute("class","tim");
+kkk.setAttribute("class","pro");
+x.innerHTML='<img src="img/AVATAR.PNG">'+com.value;
+var time=new Date();
+var hrs=time.getHours();
+var min=time.getMinutes();
+if(hrs<10){ hrs='0'+hrs; }
+if(min<10){ min='0'+min;}
+x.appendChild(kk);
+x.appendChild(kkk);
+kkk.innerHTML=m;
+kk.innerHTML=hrs+':'+min;
+var xu=document.getElementsByClassName("addcom").length-1;
+var mmmmmm=document.getElementsByClassName("addcom");
+com.value="";
+mmmmmm[xu].scrollIntoView({behavior:'smooth'});
+/////////////////////
+}
+}
+function ratte(){
+if(mxx==9){
+document.getElementById("sub").style.display="none";
+document.getElementById("rating").style.pointerEvents="none";
+document.getElementById("ra").textContent="You rated-";
+document.getElementById("toast").innerHTML="Thanks for Rating ";
+  document.getElementById("toast").style.display="block";
+  setTimeout(function(){
+  document.getElementById("toast").style.display="none";
+  },5000);
+}
+else{
+document.getElementById("toast").innerHTML="First rate Rate it";
+  document.getElementById("toast").style.display="block";
+  setTimeout(function(){
+  document.getElementById("toast").style.display="none";
+  },5000);
+
+}
+}
+function changess(e){
+document.getElementById("dropbtn").innerHTML=e;
+}
+</script>
+
+<script type="text/javascript">
+// Initialize variables
+var vid =document.getElementById("video");
+var progressdone =document.getElementById("progdone");
+var progress =document.getElementById("prog");
+var dur =document.getElementById("dur");
+var totalT= document.getElementById("totalT");
+var vol =document.getElementById("vol");
+var mute =document.getElementById("mute");
+var play =document.getElementById("pl");
+var full =document.getElementById("full");
+var back =document.getElementById("back");
+//Main Initialization
+window.addEventListener("load",update,false);
+vid.addEventListener("timeupdate",update,false);
+full.addEventListener("click",fullscreen,false);
+//Function Starts here
+function Play(){
+if (vid.paused) {
+vid.play();
+play.innerHTML="<i class='fa fa-pause'></i>";
+}
+
+else if(vid.duration==vid.currentTime){
+vid.currentTime=00;
+play.innerHTML="<i class='fa fa-pause'></i>";
+vid.play();
+}
+else {
+vid.pause();
+play.innerHTML="<i class='fa fa-play'></i>";
+}
+}
+function update(){
+var totalTimemin= Math.floor(vid.duration / 60);
+var totalTimesec=Math.floor(vid.duration - totalTimemin * 60);
+var timemin= Math.floor(vid.currentTime / 60);
+var timesec= Math.floor(vid.currentTime - timemin * 60);
+if(timesec < 10){ timesec = "0"+timesec; }
+if(totalTimesec < 10){ totalTimesec = "0"+totalTimesec; }
+if(timemin < 10){ timemin = "0"+timemin; }
+if(totalTimemin < 10){ totalTimemin = "0"+totalTimemin; }
+
+totalT.textContent=totalTimemin+':'+totalTimesec;
+dur.textContent=timemin+':'+timesec+' '+'/';
+progressdone.style.width=Math.floor((100 / vid.duration) * vid.currentTime)+"%";
+progress.value=vid.currentTime ;
+progress.max=vid.duration;
+
+}
+function changetime(e){
+vid.currentTime=e;
+}
+setInterval(function(){
+var pp= progress.value;
+progressdone.style.width=Math.floor((100 / vid.duration) * pp)+"%";
+if(vid.duration==vid.currentTime) {progressdone.style.width="100%"; play.innerHTML="<i class='fa fa-play'></i>"}
+},5)
+function setvolume(v){
+v.value=vid.volume;
+vid.volume = v / 100;
+}
+function Mute(){
+if(vid.muted){
+vid.muted = false;
+mute.innerHTML="<img src='img/imgunmute.svg'>";
+} else {
+vid.muted = true;
+mute.innerHTML="<img src='img/IMGMUTE.SVG'>";
+}
+}
+function fullscreen(){
+if(vid.requestFullScreen){
+vid.requestFullScreen();
+}
+else if(vid.webkitRequestFullScreen){
+vid.webkitRequestFullScreen();
+}
+else if(vid.mozRequestFullScreen){
+vid.mozRequestFullScreen();
+}
+}
+
+</script>
+<div id="toast" ></div>
+<br><br><br>
+<hr size="20px" color="#111" >
+<br>
+<div id="naml" >Space Dose</div><br>
+<div id="foot" >
+Page Last Updated: Jan. 01, 2019<br>
+Page Editor: Prateek Chaubey<br>
+Space.com Official: Prateek Chaubey<br><br>
+<ul>
+<li><a href="mailto:prateekchaubey260@gmail.com" >Send Feedback</a></li>
+<li><a href="tel:+918883226688" >Call Us</a></li>
+<li><a href="https://maps.google.com" >Walk to us</a></li>
+</ul>
+<br>
+<div class="socil" >
+<a href="https://plus.google.com/107589151266315616233" ><i class="fa fa-google-plus" ></i></a>
+<a href="https://facebook.com/scienceanndtechnology/" ><i class="fa fa-facebook" ></i></a>
+<i class="fa fa-pinterest" ></i>
+<a href="https://instagram.com/prateek_chaubey/" ><i class="fa fa-instagram" ></i></a>
+<a href="https://twitter.com/PrateekChaube11" ><i class="fa fa-twitter" ></i></a>
+
+</div>
+<br><br>
+</div>
+
+<div id="nav" >
+<div id="bar" onclick="ope()"></div>
+<ul type="disc" >
+<li><a href="index.html" >Home</a></li>
+<li><a href="gallery.html" >Gallery</a></li>
+<li><a href="login.html" >Login</a></li>
+<li><a href="about.html" >About us</a></li>
+<li><div id="serct"   ><input placeholder="Search Here"  type="search" id="serh" /> <i id="seer"  class="fa fa-search" onclick="searchh()"></i></div></li>
+</ul>
+<div id="nam" >Space Dose</div>
+</div>
+<div id="sidenav">
+
+<ul>
+<li><a href="index.html" >Home</a></li>
+<li><a href="gallery.html" >Gallery</a></li>
+<li><a href="login.html" >Login</a></li>
+<li><a href="about.html" >About us</a></li>
+</ul>
+<br>
+<div id="serc"  style="text-align:center" ><input placeholder="Search Here"  type="search" id="ser" /> <i id="seer"  class="fa fa-search" onclick="searchh()"></i></div>
+<span class="c" >© Space.com 2018-3100</span>
+<span id="close" onclick="clos()" >&times</span>
+</div>
+<div id="topt" onclick="goup()">&uarr;</div>
+</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
