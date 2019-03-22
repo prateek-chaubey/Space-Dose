@@ -99,7 +99,7 @@ window.location.href="https://nasasearch.nasa.gov/search?query="+texttt+"&affili
 }
 }
 function searchhh(){
-var txtt=$("#serrt").val();
+var txtt=$(".serrt").val();
 if(txtt!==""){
 window.location.href="https://nasasearch.nasa.gov/search?query="+txtt+"&affiliate=nasa&utf8=✓";
 }
