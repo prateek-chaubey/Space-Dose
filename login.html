@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#111">
+<link rel="stylesheet" href="css/css/font-awesome.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/custom-btn.css">
+<link rel="icon"  href="img/imgg/ICON.PNG">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+<meta name="description" content="Canvas Loader using HTML,CSS and JavasScript" />
+<meta name="keywords" content="JAXA,ISRO,NASA,INDIAN SPACE RESEARCH ORGANIZATION,National Aeronautics and Space Administration, CSA,SPACE NEWS ,SPACE DOSE,SPACE,FACTS,POST ,European Space Agency" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="google" content="notranslate"/> 
+<meta property="og:type" content="Space Dose: A place for all space lovers"/> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/> 
+<meta name="referrer" content="origin"/> 
+<meta name="apple-mobile-web-app-capable" content="yes"/> 
+<meta name="twitter:image" content="img/imgg/ICON.PNG"/>
+<meta name="msapplication-TileImage" content="img/imgg/ICON.PNG"/> 
+<meta name="msapplication-TileColor" content="#111"/> 
+<meta name="on" content="x-dns-prefetch-control"/> 
+<link rel="apple-touch-icon" href="img/imgg/ICON.PNG"/> 
+<meta property="og:title" content="Space Dose"/> 
+<meta property="og:url" content="http://space-dose.github.io/"/> 
+<meta property="og:description" content="Hee you can get thousands of Space facts and news."/> 
+<meta property="og:site_name" content="Space Dose for all Space Lovers"/> 
+<meta property="og:image" content="img/imgg/ICON.PNG"/> 
+<meta property="og:image:type" content="image/png"/> 
+
+<title>Space Dose</title>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8672728433742355",
+    enable_page_level_ads: true
+  });
+</script>
+</head>
+<body bgcolor="#000" text="#thiscodeisdifficult"  link="white" vlink="#stupidandnonesense" alink="#donkeythefellow">
+<div id="up" ></div>
+<br><br><br><br><br><br><br>
+<!--Login stars here-->
+<div id="loginpg" >
+<img src="img/AVATAR2.PNG" align="center"  alt="avatar" class="img" >
+<div id="login" >
+<h1>Login</h1>
+<br>
+<form action="about.html" method="get"  >
+<div class="floating-placeholder" >
+<input type="text"  name="us" id="usernam"  required="required"  /><br>
+<label for="us">Enter Username</label><br><br>
+</div>
+<div class="floating-placeholder" >
+<input type="password"  name="us" id="psdnam"  required="required"  /><br>
+<label for="us">Enter Password</label><i class="fa fa-eye-slash" onclick="psdshow()" id="psdeye"></i><br><br>
+</div>
+<input type="checkbox" checked="checked"  id="check1" name="check1"  >
+<label for="check1"   class="che"><span>Remember Me</span></label>
+<br><br>
+<input class="sin" id="logagin"  onclick="loginagi()"  type="button" value="" />
+<br>
+<button class="btn"  onclick="login()"><i class="fa fa-sign-in" ></i> Login</button><br><br>
+<input class="sin" onclick="sinn()"  type="button" value="Create an Account? " /><span>|</span>
+<input class="sin" onclick="sinn()" type="button" value="Forgot Password?" />
+</form>
+</div>
+<!--Sign up -->
+<div id="signup" >
+<h1>Sign up</h1><br>
+<form action="about.html" method="get"  >
+<div class="floating-placeholder" >
+<input type="text"  name="us" id="usnew" class="uss"  required="required"  /><br>
+<label for="us" style="left:-75px" >Full Name</label><br><br>
+</div>
+<div class="floating-placeholder" >
+<input type="text"  name="us" id="us" class="uss"   required="required"   /><br>
+<label for="us"  style="left:-65px" >Enter E-mail</label><br><br>
+</div>
+<div class="floating-placeholder" >
+<input type="password"  name="us" id="us"  required="required"  /><br>
+<label for="us">Enter Password</label><br><br>
+</div>
+<div class="floating-placeholder" >
+<input type="password"  name="us" id="us"  required="required"  /><br>
+<label for="us">Enter Password</label><br><br>
+</div>
+<span>DOB:</span><input type="date" value="2019-01-01"   id="us" required="required"  /><br><br><br>
+<span>Gender:</span><input type="radio" value="male" checked="checked"  id="radio1" name="radio1" >
+<label for="radio1"  class="rad"><span>Male</span></label>
+<input type="radio"  id="radio2" value="female"  name="radio1" >
+<label for="radio2" class="rad" ><span>Female</span></label>
+
+
+<br>
+<button class="btn"  onclick="signin()"><i class="fa fa-sign-in" ></i> Signup</button><br><br>
+<input class="sin" onclick="log()" type="button" value="Already have an Account? Login" />
+
+</form>
+</div>
+<script type="text/javascript">
+function psdshow(){
+var psd=document.getElementById("psdnam");
+if(psd.type=="password"){
+psd.type="text";
+$("#psdeye").removeClass("fa-eye-slash");
+$("#psdeye").addClass("fa-eye");
+}
+else{
+psd.type="password";
+$("#psdeye").removeClass("fa-eye");
+$("#psdeye").addClass("fa-eye-slash");
+}
+}
+</script>
+<style type="text/css">
+#psdeye{
+position:absolute;
+top:30px;
+font-size:20px;
+left:230px;
+color:#256290;
+}
+.floating-placeholder{
+position:relative;
+text-align:center;
+width:100%;
+height:80px;
+
+}
+
+.floating-placeholder   label{
+position:relative;
+top:-30px;
+left:-50px;
+font-size:20px;
+color:gray;
+font-weight:lighter;
+transition: .5s;
+pointer-events:none;
+}
+input[type="password"]:focus ~ label{
+top:-60px;
+left:-70px;
+font-size:15px;
+color:white;
+}
+input[type="password"]:valid ~ label{
+top:-60px;
+left:-70px;
+font-size:15px;
+color:white;
+}
+input[type="password"]:not(:focus) ~ label{
+color:gray;
+}
+input[type="password"]:valid{
+border-bottom:5px solid green;
+}
+.uss ~ label{
+left:-80px;
+}
+input[type="text"] ~ label{
+left:-50px;
+}
+
+input[type="text"]:focus ~ label{
+top:-60px;
+left:-70px;
+font-size:15px;
+color:white;
+}
+input[type="text"]:valid ~ label{
+top:-60px;
+left:-70px;
+font-size:15px;
+color:white;
+}
+input[type="text"]:not(:focus) ~ label{
+color:gray;
+}
+input[type="text"]:valid{
+border-bottom:5px solid green;
+}
+#signup span,#login span{
+font-size:20px;
+color:#aaa;
+}
+#signup,#login{
+position:absolute;
+margin-left:30px;
+}
+#loginpg h1{
+color:#999;
+}
+#loginpg .img{
+border-radius:50%;
+position:relative;
+height:100px;
+top:-35px;
+background-image:rgba(0,0,0,.8);
+width:100px;
+}
+#us,#usnew,#usernam,#psd,#psdnam{
+border-top:0;
+border-left:0;
+border-right:0;
+font-weight:lighter;
+border-bottom:1px solid #256289;
+margin-top:30px;
+color:white;
+font-size:20px;
+background:transparent;
+}
+#us,#usnew{
+border-bottom:1px solid #299899;
+}
+#signup{
+display:none;
+margin-left:20px;
+transform:rotateY(180deg);
+}
+#psd:focus::placeholder,#usnew:focus::placeholder,#usernam:focus::placeholder,#us:focus::placeholder{
+color:#989298;
+}
+#loginpg{
+height:500px;
+width:330px;
+background:rgba(22,22,22,.7);
+box-shadow:1px 1px 1px #fff;
+margin:auto;
+text-align:center;
+border-radius:15px;
+transform-style:preserve-3d;
+transition: transform .5s;
+}
+/*#loginpg:hover{
+transform:rotateY(180deg);
+}*/
+.btn {
+transition:.25s;
+width:100%;
+border-radius:20px;
+font-size:15px;
+background:#444;
+box-shadow: 0px 4px 0px #777;
+}
+.btn:active{
+transform:translateY(3px);
+box-shadow: 0px 2px 0px #777;
+}
+.sin{
+background:transparent;
+color:#276296;
+font-size:15px;
+border:0;
+}
+.sin:hover{
+text-decoration:underline;
+}
+</style>
+</div>
+<!--Login ends here-->
+<br><br><br><br><br><br>
+<hr size="20px" color="#111" >
+<br>
+<div id="naml" >Space Dose</div><br>
+<div id="foot" >
+Page Last Updated: Jan. 01, 2019<br>
+Page Editor: Prateek Chaubey<br>
+Space.com Official: Prateek Chaubey<br><br>
+<ul>
+<li><a href="mailto:prateekchaubey260@gmail.com" >Send Feedback</a></li>
+<li><a href="tel:+918883226688" >Call Us</a></li>
+<li><a href="https://maps.google.com" >Walk to us</a></li>
+</ul>
+<br>
+<div class="socil" >
+<a href="https://plus.google.com/107589151266315616233" ><i class="fa fa-google-plus" ></i></a>
+<a href="https://facebook.com/scienceanndtechnology/" ><i class="fa fa-facebook" ></i></a>
+<i class="fa fa-pinterest" ></i>
+<a href="https://instagram.com/prateek_chaubey/" ><i class="fa fa-instagram" ></i></a>
+<a href="https://twitter.com/PrateekChaube11" ><i class="fa fa-twitter" ></i></a><br>
+
+</div>
+<div class="pc" ><a href="privacy.html" >Privacy Policy</a> • <a href="disclaim.html" >Disclaimer</a> • <a href="tc.html" >Terms & Conditions</a>  • <a href="contact.html" >Contact Us</a> </div>
+<br><br>
+</div>
+</div>
+<div id="nav" >
+<div id="bar" onclick="ope()"></div>
+<ul type="disc" >
+<li><a href="index.html" >Home</a></li>
+<li><a href="gallery.html" >Gallery</a></li>
+<li><a href="about.html" >About us</a></li>
+<li><a href="nasa.html" >NASA Live</a></li>
+<li><div id="serct"   ><input placeholder="Search Here"  type="search" id="serh" /> <i id="seer" onclick="searchh()" class="fa fa-search" ></i></div></li>
+</ul>
+<div id="nam" >Space Dose</div>
+</div>
+<div id="sidenav">
+
+<ul>
+<li><a href="index.html" >Home</a></li>
+<li><a href="gallery.html" >Gallery</a></li>
+<li><a href="about.html" >About us</a></li>
+<li><a href="nasa.html" >NASA Live</a></li>
+</ul>
+<br>
+<div id="serc"  style="text-align:center" ><input placeholder="Search Here"  type="search" id="ser" /> <i id="seer"  class="fa fa-search" onclick="searchh()"></i></div>
+<span class="c" >© Space.com 2018-3100</span>
+<span id="close" onclick="clos()" >&times</span>
+</div>
+<div id="topt" onclick="goup()">&uarr;</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
