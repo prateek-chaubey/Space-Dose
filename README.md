@@ -1,1 +1,1 @@
-# A fully functional  website that I have made for my school project
+# A fully functional space themed  website that I have made for my school project
